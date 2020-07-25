@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wallet</title>
+    <style>
+        body{
+            background-color: darksalmon;
+        }
+        h1{
+            font: expanded;
+            color: red;
+        }
+    </style>
+</head>
+<body><h1>select the wallet</h1>
+<form action="../order1/" method="post">
+    {% csrf_token %}
+    <h3>
+    <label> <input type="radio" name="a"> phonepay </label> <br>
+    <label> <input type="radio" name="a" > googlepay </label> <br>
+    <label> <input type="radio" name="a"> paytm </label> <br>
+    <label> <input type="radio" name="a"> mipay </label> <br>
+    <label> <input type="radio" name="a"> bhimupi </label> <br>
+    </h3>
+    <p> YOUR ORDER IS FOR {{name}} :<input type= "checkbox" value="{{name}}" name="name" required> </p>
+    <p> MUST CLICK HERE TO PAY: <input type="checkbox" value="{{pay}}" name="price" required> </p>
+    <p> CLICK TO PAY: <input type="submit" value="pay {{pay}}" name="submit"> </p>
+</form>
+
+</body>
+</html>

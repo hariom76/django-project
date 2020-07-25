@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ORDER PAGE</title>
+    <style>
+        p{
+            color:white;
+        }
+        h2{
+            color:red;
+          }
+        body{
+            background-image: url({% static 'images .jpg' %});
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<form action="../func/" method="post" >
+    {% csrf_token %}
+    <input value="LOGOUT" type="submit" >
+</form>
+<form action="../itemspage/" method="post" >
+ {% csrf_token %}
+    <center> <h4> PAYMENT SUCCESSFULL </h4> </center>
+<center> <h3> ORDER SUCCESSFULLY PLACED </h3> </center>
+
+<center> <p> your order for {{name}} and for {{ price }} is succesfully placed and will be delivered soon at your registred address</p>
+
+  <center>  <h3> THANK YOU </h3> </center>
+    <center> <p> CLICK HERE TO ORDER AGAIN : <input type="submit" value="order_again" > </p> </center>
+</form>
+</body>
+</html>

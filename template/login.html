@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user log in</title>
+    <style>
+        h1{
+            color:red;
+        }
+        input{
+            color:darkgreen;
+        }
+        p{
+            color:white;
+        }
+        body{
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+			background-image: url({% static 'images.jpg' %});
+			background-size: cover;
+        }
+        label {
+            width:100px;
+            float:left;
+        }
+    </style>
+
+</head>
+<p>
+<center> <p> <h1> WELCOME TO FOOD ORDERING SERVICE </h1> </p> </center>
+<form action="../login/" method="post" >
+    {% csrf_token %}
+    <p> <label> User id</label> <input type="email" name="uid" required> </p>
+    <p> <label> Password</label> <input type="password" name="pwd" required> </p>
+    <center><p> <input type="submit" value="log in"  name="login" > </p></center>
+</form>
+<form action="../login/" method="post" >
+    {% csrf_token %}
+     <p> NOT YET REGISTERED GET REGISTERED <input type="submit" value="register"  name="register"> </p>
+</form>
+</body>
+</html>

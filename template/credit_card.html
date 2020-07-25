@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>details</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+<form action="../order1/" method="post" >
+    {% csrf_token %}
+<center><h1>payment details</h1><br>
+<p>account number:<input type="number" required></p><br>
+<p>cvv number:<input type="number" required></p><br>
+<p>holder name:<input type="text" required></p><br>
+<p>expiry date:<input type="date" required></p><br>
+    <p> MUST CLICK HERE TO PAY: <input type="checkbox" value="{{pay}}" name="price" required> </p>
+    <p> YOUR ORDER IS FOR {{name}} :<input type= "checkbox" value="{{name}}" name="name" required> </p>
+    <p> CLICK TO PAY: <input type="submit" value="pay {{pay}}" name="submit"> </p>
+    </form>
+</center>
+</body>
+</html>

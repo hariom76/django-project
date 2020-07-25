@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>registration page</title>
+
+    <style>
+        h1{
+            color:blueviolet;
+        }
+        input{
+            color:green;
+        }
+        p{
+            color:green;
+        }
+        label{
+      display: block;
+      width : 100px;
+        }
+    </style>
+</head>
+{% extends 'practice.html' %}
+<body>
+    {% block content %}
+    <center>
+    <h1> REGISTRATION FORM </h1>
+    <form action="../login1/" method="post">
+        {% csrf_token %}
+        <p> <label>Enter name:</label>         <input type="text" name="name" required></p>
+        <p> <label>Enter phone number:</label> <input type="number" name="number" required></p>
+        <p> <label>Enter email:</label>        <input type="email" name="email" required></p>
+        <p> <label>Enter password:</label>     <input type="password" name="pass" required></p>
+        <p> <label>Enter DOB: </label>         <input type="date" name="dob" required></p>
+        <p> <input type="submit" value="submit" name="registration" > </p>
+    </form>
+
+    <form action="../func/" method="post" >
+        {% csrf_token %}
+      <p>Click here to go to login page: <input type="submit" value="Login_Here" name="login" > </p>
+    </form
+    </center>
+    {% endblock %}
+</body>
+</html>

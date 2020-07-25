@@ -1,0 +1,114 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Food Online</title>
+	<link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" charset="utf-8" />
+</head>
+<body>
+<form action="../func/" method="post">
+  {% csrf_token %}
+  <input type="submit" value="LOGOUT" name="logout">
+</form>
+  <div id="wrapper">
+    <div id="logo">
+      <p> WELCOME {{id}} </p>
+      <h1>Food Online</h1>
+      <p>Next Food Network Star</p>
+    </div>
+    <div id="nav">
+      <div id="nav-left">
+        <ul>
+          <li><a href="https://colorlib.com/wp/templates/">Home</a></li>
+          <li class="orange"><a href="{% static 'http://www.freewebsitetemplates.com' %} ">Contact</a></li>
+        </ul>
+      </div>
+      <div id="nav-right">
+        <ul>
+          <li><a href="http://www.freewebsitetemplates.com">About us</a></li>
+          <li><a href="http://www.freewebsitetemplates.com">Menu</a></li>
+          <li><a href="{% static 'http://www.freewebsitetemplates.com' %}">Services</a></li>
+          <li><a href="{% static 'http://www.freewebsitetemplates.com' %}">Special offer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="body">
+      <div id="left">
+        <div id="welcome">
+          <h2 class="guilded"><span>Welcome</span></h2>
+          <p>Don't forget to check <a href="{% static 'http://www.freewebsitetemplates.com' %}">free website templates</a> every day, because we add  a new free website template almost daily.</p>
+          <p>You can remove any link to our websites from this template you're free to use the template without linking back to us.</p>
+          <p>This is just a place holder so you can see how the site would look like.</p>
+          <p class="more"><a href="{% static 'http://www.freewebsitetemplates.com' %}">more...</a></p>
+        </div>
+        <div id="chef">
+          <h3>Aliquam erat volutpat.</h3>
+          <p>Even more websites all about website templates on <a href="{% static ' http://www.justwebtemplates.com' %}">Just Web Templates</a>.</p>
+          <p>If you're looking for beautiful and professionally made templates you can find them at <a href="{% static ' http://www.templatebeauty.com' %}">Template Beauty</a>.</p>
+          <p>&nbsp;</p>
+          <p class="more"><a href="{% static ' http://www.freewebsitetemplates.com' %}">more...</a></p>
+        </div>
+      </div>
+      <div id="right">
+        <div id="booking">
+          <h2>Online booking</h2>
+          <form action="../order/" method="post" accept-charset="utf-8">
+            {% csrf_token %}
+            <table border="0" cellspacing="2" cellpadding="0">
+              <tr><th>Time</th><td>
+                <select name="e">
+                  <option value="breakfast">Breakfast</option>
+                  <option value="lunch">Lunch</option>
+                  <option value="dinner">Dinner</option>
+                  <option value="drinks">Drinks</option>
+                </select>
+              </td></tr>
+              <tr> <th>Selsect Dish </th>
+               <td> <select name="sd">
+                 <option value="Rs.{{price.Tea_Bread}}" > Tea_Bread </option>
+                 <option value="Rs.{{price.Paw_Bhagi}}" > Paw_Bhagi </option>
+                 <option value="Rs.{{price.Chhole_bhatoore}}" > Chhole_bhatoore </option>
+                 <option value="Rs.{{price.Mutton_Curtlet}}" > Mutton_Curtlet </option>
+                 <option value="Rs.{{price.Chicken_Biryani}}" > Chicken_Biryani </option>
+                 <option value="Rs.{{price.Paneer_Pakora}}" > Paneer_Pakora </option>
+                 <option value="Rs.{{price.Fish_Fry}}" >Fish_Fry</option>
+               </select></td>
+              </tr>
+              <tr><td class="submission" colspan="2"><input type="image" src="{% static 'images/submit-button.PNG' %}" name="s" value="Submit"></td></tr>
+
+            </table>
+          </form>
+          <form action="../itemspage/" method="post">
+           {% csrf_token %}
+          <input type="submit" value="CLICK HERE FOR MORE ITEMS" name="item" >
+          </form>
+        </div>
+        <div id="menu">
+		
+          <h2>Special menu</h2>
+          <p> If you're having <br/>
+			  problems editing the <br/>template  ask for help <br/>
+			  on <a href="{% static ' http://www.freewebsitetemplates.com/forum/' %}">the forum</a>.
+		  </p>
+          <form action="" method="get" accept-charset="utf-8">
+            <p style="{% static ' static margin-left:-200px;' %}"><input type="image" src="{% static 'images/details-button.PNG' %} " name="s" value="Details"></p>
+          </form>
+        </div>
+		
+      </div>
+      <div class="clear">&nbsp;</div>
+      <div id="footer">
+        <ul>
+          <li><a href="{% static ' http://www.freewebsitetemplates.com' %}">Home</a> | </li>
+          <li><a href="{% static ' http://www.freewebsitetemplates.com' %}">About Us</a> | </li>
+          <li><a href="{% static ' http://www.freewebsitetemplates.com' %}">Menu</a> | </li>
+          <li><a href="{% static ' http://www.freewebsitetemplates.com' %}">Service</a> | </li>
+          <li><a href="{% static ' http://www.freewebsitetemplates.com' %}">Special offer</a> | </li>
+          <li><a href="{% static ' http://www.freewebsitetemplates.com' %}">Contact</a></li>
+        </ul>
+        <p>copyright &copy; food company</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

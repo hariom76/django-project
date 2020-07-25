@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>
+ITEMS AVAILABLE
+</title>
+
+<style>
+    h1{
+        color:cyan;
+    }
+body {
+background-image: url("{% static 'backgroundimage.jpg' %}");
+background-size: cover;
+background-color: #6DDCBD;
+}
+input {
+color='red';
+background-color: dodgerblue;
+}
+div.item1 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  border: 3px solid white;
+    background-color: #0b2e13;
+}
+    div.item2 {
+  position: fixed;
+  top: 0px;
+  left: 300px;
+  border: 3px solid white;
+  background-color: #0b2e13
+}
+  div.item3 {
+  position: fixed;
+  top: 0px;
+  left: 600px;
+  border: 3px solid white;
+  background-color: #0b2e13
+}
+     div.item4 {
+  position: fixed;
+  top: 0px;
+  left: 900px;
+  border: 3px solid white;
+         background-color: #0b2e13
+}
+     div.item5 {
+  position: fixed;
+  top: 300px;
+  left: 0px;
+  border: 3px solid white;
+         background-color: #0b2e13
+}
+     div.item6 {
+  position: fixed;
+  top: 300px;
+  left: 300px;
+  border: 3px solid white;
+         background-color: #0b2e13
+}
+     div.item7 {
+  position: fixed;
+  top: 300px;
+  left: 600px;
+  border: 3px solid white;
+         background-color: #0b2e13
+}
+     div.item8 {
+  position: fixed;
+  top: 300px;
+  left: 900px;
+  border: 3px solid white;
+         background-color: #0b2e13
+}
+</style>
+</head>
+
+<body>
+<form action='../order/' method="post">
+    {% csrf_token %}
+<div class="item1" >
+    <img src="{% static 'images.jpg' %}" height="100" width="200">
+    <p><h1> BURGER </h1></p>
+    <p> MUST CLICK HERE TO ORDER: <input type="checkbox" value="Burger" name="name" required> </p>
+    <p><input type="submit" value="RS.{{price.Burger}}" name="price"></p>
+</div>
+</form>
+<form action='../order/' method="post">
+    {% csrf_token %}
+<div class="item2">
+    <img src="{% static 'biryani.jpg' %}" height="100" width="200">
+    <p><h1>BIRYANI</h1></p>
+    <p> MUST CLICK HERE TO ORDER: <input type="checkbox" value="Biryani" name="name" required> </p>
+    <p><input type="submit" value="Rs.{{price.Chicken_Biryani}}" name="price"></p>
+</div>
+</form>
+<form action='../order/' method="post">
+    {% csrf_token %}
+<div class="item3">
+    <img src="{% static 'paneer.jpg'%}" height="100" width="200">
+    <p><h1>PANEER</h1></p>
+    <p> MUST CLICK HERE TO ORDER: <input type="checkbox" value="Paneer" name="name" required> </p>
+    <p><input type="submit" value="RS.{{price.Paneer}}" name="price"></p>
+</div>
+</form>
+<form action='../order/' method="post">
+    {% csrf_token %}
+<div class="item4">
+    <img src="{% static 'tadka.jpg' %}" height="100" width="200">
+    <p><h1>TADKA</h1></p>
+    <p> MUST CLICK HERE TO ORDER: <input type="checkbox" value="Tadka" name="name" required> </p>
+    <p><input type="submit" value="RS.{{price.Tadka}}" name="price"></p>
+</div>
+</form>
+<form action='../order/' method="post">
+    {% csrf_token %}
+<div class="item5">
+    <img src="{% static 'chowmin.jpg' %}" height="100" width="200">
+    <p><h1>CHOWMIN</h1></p>
+    <p> MUST CLICK HERE TO ORDER: <input type="checkbox" value="Chowmin" name="name" required> </p>
+    <p><input type="submit" value="RS.{{price.Chowmin}}" name="price"></p>
+</div>
+</form>
+<form action='../order/' method="post">
+    {% csrf_token %}
+<div class="item6">
+    <img src="{% static 'eggroll.jpg' %}" height="100" width="200">
+    <p><h1>EGGROLL</h1></p>
+    <p> MUST CLICK HERE TO ORDER: <input type="checkbox" value="EggRoll" name="name" required> </p>
+    <p><input type="submit" value="RS.{{price.Egg_Roll}}" name="price"></p>
+</div>
+</form>
+<form action='../order/' method="post">
+    {% csrf_token %}
+<div class="item7" >
+    <img src="{% static 'momo.jpg' %}" height="100" width="200">
+    <p><h1>MOMO</h1></p>
+    <p> MUST CLICK HERE TO ORDER: <input type="checkbox" value="Momo" name="name" required> </p>
+    <p><input type="submit" value="RS.{{price.Momo}}" name="price"></p>
+</div>
+</form>
+<form action='../order/' method="post">
+    {% csrf_token %}
+<div class="item8" >
+    <img src="{% static 'muttoncurtlet.jpg' %}" height="100" width="200">
+    <p><h1>CURTLET</h1></p>
+    <p> MUST CLICK HERE TO ORDER: <input type="checkbox" value="Curtlet" name="name" required> </p>
+    <p><input type="submit" value="RS.{{price.Mutton_Curtlet}}" name="price"> </p>
+</div>
+</form>
+</body>
+</html>

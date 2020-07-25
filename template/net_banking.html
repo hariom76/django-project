@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wallet</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        h1{
+            color: coral;
+        }
+        h3{
+            color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body><center>
+<form action="../order1/" method="post" >
+{% csrf_token %}
+<h1>choose bank</h1>
+<h3>popular banks:</h3>
+<p><input type="radio" name="s">AXIS BANK</p>
+<p><input type="radio" name="s">HDFC</p>
+<p><input type="radio" name="s">ICIC BANK</p>
+<p><input type="radio" name="s">SBI</p>
+<br>
+<h3>other banks:</h3>
+<p><input type="radio" name="s">kotak mahindra bank</p>
+<p><input type="radio" name="s">allahabad bank </p>
+<p><input type="radio" name="s">andhra bank </p>
+<p><input type="radio" name="s">bank of maharastra </p>
+<p><input type="radio" name="s">bandhan bank</p>
+<p><input type="radio" name="s">bank of baroda </p>
+<p><input type="radio" name="s">bank of india </p>
+<p><input type="radio" name="s">canara bank </p>
+<p><input type="radio" name="s">citi bank </p>
+<p><input type="radio" name="s">corporation bank </p>
+    <p> YOUR ORDER IS FOR {{name}} :<input type= "checkbox" value="{{name}}" name="name" required> </p>
+    <p> MUST CLICK HERE TO PAY: <input type="checkbox" value="{{pay}}" name="price" required> </p>
+    <p> CLICK TO PAY: <input type="submit" value="pay {{pay}}" name="submit"> </p>
+</form>
+</center>
+</body>
+</html>

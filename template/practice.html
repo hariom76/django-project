@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>
+parctice.html
+</title>
+
+<style>
+body {
+background-image: url("{% static 'images.jpg' %}");
+background-size: cover;
+bgcolor='red'
+}
+input {
+color='red';
+}
+</style>
+
+</head>
+
+<body>
+{% block content %}
+
+{% endblock %}
+</body>
+
+</html>
